@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <h1>
+    
         <?php
             spl_autoload_register(function($class){
                 include_once 'system/libs/'.$class.'.php';
@@ -20,7 +20,7 @@
         ?>
 
         
-    </h1>
+   
     
 </body>
 </html>

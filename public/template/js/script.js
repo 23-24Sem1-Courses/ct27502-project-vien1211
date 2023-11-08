@@ -38,13 +38,13 @@ jsArrow.onclick = function() {
     navLinks.classList.toggle("show3");
 }
 
-document.getElementById("add").addEventListener("click", function() {
-    const stepList = document.querySelector("#step ol");
-    const newStep = document.createElement("li");
-    const stepNumber = stepList.children.length + 1;
+// document.getElementById("add").addEventListener("click", function() {
+//     const stepList = document.querySelector("#step ol");
+//     const newStep = document.createElement("li");
+//     const stepNumber = stepList.children.length + 1;
 
-    newStep.innerHTML = `
-    <textarea name="steptodo${stepNumber}" class="form-control" placeholder="Bước ${stepNumber}"></textarea>
-    `;
-    stepList.appendChild(newStep);
-});
+//     newStep.innerHTML = `
+//     <textarea name="steptodo${stepNumber}" class="form-control" placeholder="Bước ${stepNumber}"></textarea>
+//     `;
+//     stepList.appendChild(newStep);
+// });

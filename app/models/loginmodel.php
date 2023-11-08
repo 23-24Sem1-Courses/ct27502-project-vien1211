@@ -1,18 +1,29 @@
-<?php
-class loginmodel extends DModel{
-    public function __construct(){
+
+ <?php
+class loginmodel extends DModel {
+    public function __construct() {
         parent::__construct();
     }
-    public function login($table_admin,$username,$password){
-        $sql = "SELECT * FROM $table_admin WHERE username=? AND password=?";
-        return $this->db->affectedRows($sql,$username,$password);
-        
+
+    public function login($table_admin, $username, $password) {
+        $query = "SELECT * FROM $table_admin WHERE username = :username AND password = :password";
+        $statement = $this->db->prepare($query);
+        $statement->bindParam(':username', $username, PDO::PARAM_STR);
+        $statement->bindParam(':password', $password, PDO::PARAM_STR);
+        $statement->execute();
+        return $statement->rowCount(); // Đếm số dòng bị ảnh hưởng
     }
-   public function getLogin($table_admin,$username,$password){
-    $sql = "SELECT * FROM $table_admin WHERE username=? AND password=?";
-    return $this->db->selectUser($sql,$username,$password);
-   }
+
+    public function getLogin($table_admin, $username, $password) {
+        $query = "SELECT * FROM $table_admin WHERE username = :username AND password = :password";
+        $statement = $this->db->prepare($query);
+        $statement->bindParam(':username', $username, PDO::PARAM_STR);
+        $statement->bindParam(':password', $password, PDO::PARAM_STR);
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
+
 
 

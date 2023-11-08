@@ -8,7 +8,7 @@
     }
 ?>
 <h3>Liệt kê danh mục món ăn</h3>
-    <table class="table table-striped">
+    <table class="table table_category">
     <thead>
       <tr>
         <th>Id</th>

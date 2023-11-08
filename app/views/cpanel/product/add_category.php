@@ -1,5 +1,5 @@
 
-<div class=" container col-md-6 main">
+<div class=" container col-md-4 main">
 <?php
     if(!empty($_GET['msg'])){
         $msg = unserialize(urldecode($_GET['msg']));

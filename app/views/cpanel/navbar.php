@@ -30,7 +30,7 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Thông tin Website</a></li>
+                
 
                 <li>
                     <a href="#">Admin</a>
