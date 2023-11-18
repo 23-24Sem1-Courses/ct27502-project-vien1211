@@ -2,15 +2,15 @@
 
 Học kỳ 1, Năm học 2023-2024
 
-**MSSV 1** : 
+**MSSV 1** : B2014630
 
-**Họ tên SV 1**:
+**Họ tên SV 1**: Trương Ngọc Viên
 
-**MSSV 2**:
+**MSSV 2**: B2014601
 
-**Họ tên SV 2**:
+**Họ tên SV 2**: Nguyễn Tấn Phước
 
-**Lớp học phần**:
+**Lớp học phần**: 02
 
-**Tên dự án**:
+**Tên dự án**: Website Công Thức nấu ăn
 
