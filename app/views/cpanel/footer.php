@@ -15,7 +15,7 @@
                         <a href="#" class="text-muted">Contact</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" class="text-muted">About Us</a>
+                        <a href="<?php echo BASE_URL ?>/about/aboutus" class="text-muted">About Us</a>
                     </li>
                     <li class="list-inline-item">
                         <a href="#" class="text-muted">Term</a>

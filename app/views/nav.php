@@ -33,7 +33,7 @@
                    
                 </li>
 
-                <li><a href="<?php echo BASE_URL ?>/login/dashboard">Về chúng tôi</a></li>
+                <li><a href="<?php echo BASE_URL ?>/about/aboutus">Về chúng tôi</a></li>
 
                 <li>
                     <a href="#">Bạn là Admin?</a>

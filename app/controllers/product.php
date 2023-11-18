@@ -99,10 +99,10 @@ class product extends DController{
             move_uploaded_file($tmp_image, $path_uploads);
 
             $message['msg']= "Thêm công thức thành công";
-            header('Location:'.BASE_URL."/product/add_recipe?msg=".urlencode(serialize($message)));
+            header('Location:'.BASE_URL."/product/list_recipe?msg=".urlencode(serialize($message)));
         }else{
             $message['msg']= "Thêm công thức thất bại";
-            header('Location:'.BASE_URL."/product/add_recipe?msg=".urlencode(serialize($message)));
+            header('Location:'.BASE_URL."/product/list_recipe?msg=".urlencode(serialize($message)));
 
         }
        

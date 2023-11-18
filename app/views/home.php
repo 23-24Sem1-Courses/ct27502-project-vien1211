@@ -114,7 +114,7 @@ foreach($category as $key => $cate){
                     </div>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $rec_cate['title_recipe'] ?></h5>
-                        <p class="card-text"><?php substr($rec_cate['desc_recipe'], 0, 100) ?></p>
+                        <p class="card-text"><?php echo substr($rec_cate['desc_recipe'], 0, 100) ?></p>
                         <a href="<?php echo BASE_URL ?>/recipe/detail_recipe/<?php echo $rec_cate['id_recipe'] ?>" class="btn">Chi tiết</a>
                     </div>
                 </div>
