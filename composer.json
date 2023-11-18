@@ -1,0 +1,13 @@
+{
+    "name": "pc/ct275_project",
+    "autoload": {
+        "psr-4": {
+            "app\\controllers\\": "app/controllers/"
+        }
+    },
+    "authors": [{
+        "name": "Truong Ngoc Vien",
+        "email": "vienb2014630@student.ctu.edu.vn"
+    }],
+    "require": {}
+}

@@ -1,4 +1,6 @@
 <?php
+
+
 class Load{
     
     public function __construct(){
@@ -9,7 +11,7 @@ class Load{
         if($data==true){
             extract($data);
         }
-        include 'app/views/'.$filename.'.php';
+         include 'app/views/'.$filename.'.php';
     }
 
     public function model($filename){

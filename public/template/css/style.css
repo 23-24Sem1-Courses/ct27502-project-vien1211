@@ -309,10 +309,13 @@
                 }
             }
             
+            .container {
+                margin-top: 0px;
+            }
+            
             .main {
                 padding: 16px;
-                margin-top: 70px;
-                height: 1500px;
+                margin-top: 50px;
             }
             
             .user {
@@ -359,4 +362,42 @@
             
             tbody {
                 font-size: smaller;
+            }
+            
+            h5.card-title {
+                font-size: 30px;
+                font-weight: 600;
+            }
+            
+            .btn {
+                background-color: #f87171;
+                color: #ffff;
+            }
+            
+            .btn:hover {
+                background-color: #e18181;
+                color: #ffff;
+            }
+            
+            .title-bar {
+                background: #e18181;
+                color: #fff;
+                border-radius: 5px;
+                line-height: 20px;
+                text-transform: none;
+                border-top-right-radius: 45px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            
+            h1 {
+                font-weight: 300;
+                margin: 20px;
+                padding: 5px;
+            }
+            
+            .image-wrapper img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
             }

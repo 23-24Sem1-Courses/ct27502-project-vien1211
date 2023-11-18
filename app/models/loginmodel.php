@@ -11,7 +11,7 @@ class loginmodel extends DModel {
         $statement->bindParam(':username', $username, PDO::PARAM_STR);
         $statement->bindParam(':password', $password, PDO::PARAM_STR);
         $statement->execute();
-        return $statement->rowCount(); // Đếm số dòng bị ảnh hưởng
+        return $statement->rowCount(); 
     }
 
     public function getLogin($table_admin, $username, $password) {

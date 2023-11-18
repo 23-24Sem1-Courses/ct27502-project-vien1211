@@ -3,7 +3,7 @@
     if(!empty($_GET['msg'])){
         $msg = unserialize(urldecode($_GET['msg']));
         foreach ($msg as $key => $value){
-            echo '<span style="color:blue;font-weight:bold">'.$value.'</span>';
+            echo '<span style="color:#f87171;;font-weight:bold">'.$value.'</span>';
         }
     }
 ?>
@@ -27,7 +27,7 @@
         <td><?php echo $i ?></td>
         <td><?php echo $cate['title_category'] ?></td>
         <td><?php echo $cate['desc_category'] ?></td>
-        <td><a href="<?php echo BASE_URL ?>/product/delete_category/<?php echo $cate['id_category'] ?>">Xóa</a> || <a href="<?php echo BASE_URL ?>/product/edit_category/<?php echo $cate['id_category'] ?>">Cập nhật</a></td>
+        <td><a href="<?php echo BASE_URL ?>/product/delete_category/<?php echo $cate['id_category'] ?>" class="btn">Xóa</a>  <a href="<?php echo BASE_URL ?>/product/edit_category/<?php echo $cate['id_category'] ?>" class="btn">Cập nhật</a></td>
       </tr>
       <?php
             }

@@ -1,4 +1,5 @@
 <?php
+
 class Main{
     public $url;
     public $controllerName = "index";

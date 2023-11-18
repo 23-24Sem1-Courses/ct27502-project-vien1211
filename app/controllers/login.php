@@ -12,22 +12,28 @@ class login extends DController{
     }
 
     public function login(){
-        $this->load->view('cpanel/header');
-        $this->load->view('cpanel/navbar');
+       // $this->load->view('cpanel/header');
+       // $this->load->view('cpanel/navbar');
         Session::init();
         if(Session::get("login")==true){
             header("location:".BASE_URL."/login/dashboard");
         }
-        $this->load->view('cpanel/footer');  
+       // $this->load->view('cpanel/footer');  
         $this->load->view('cpanel/login');
         
     }
 
     public function dashboard(){
         Session::checkSession();
+        $table = 'category';
+        $table_recipe = 'recipe';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->category_user($table);
+        $data['list_recipe'] = $categorymodel->list_recipe_index($table_recipe);
+       
         $this->load->view('cpanel/header');
-        $this->load->view('cpanel/navbar');
-        $this->load->view('cpanel/dashboard');
+        $this->load->view('cpanel/navbar', $data);
+        $this->load->view('cpanel/dashboard', $data );
         $this->load->view('cpanel/footer');
     }
     public function authentication_login(){
@@ -54,8 +60,9 @@ class login extends DController{
 
     public function logout(){
         Session::init();
-        Session::destroy();
-        header("location:".BASE_URL."/login");
+        // Session::destroy();
+        unset($_SESSION['login']);
+        header("location:".BASE_URL."/index");
 
         
         

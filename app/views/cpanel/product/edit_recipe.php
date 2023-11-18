@@ -4,7 +4,7 @@
     if(!empty($_GET['msg'])){
         $msg = unserialize(urldecode($_GET['msg']));
         foreach ($msg as $key => $value){
-            echo '<span style="color:blue;font-weight:bold">'.$value.'</span>';
+            echo '<span style="color:#f87171;;font-weight:bold">'.$value.'</span>';
         }
     }
 ?>
@@ -21,15 +21,15 @@
 
     
         <div class="form-group">
-            <label for="email">Hình ảnh món ăn</label>
+            <label for="img">Hình ảnh món ăn</label>
             <input type="file" name="img_recipe" class="form-control">
             <p><img src="<?php echo BASE_URL ?>/public/uploads/product/<?php echo $rec['img_recipe'] ?>" height="100" width="100"></p>
         </div>
-    
+   
 
     
         <div class="form-group">
-            <label for="email">Danh mục món ăn</label>
+            <label for="cate">Danh mục món ăn</label>
             <select class="form-control" name="category">
                 <?php
                 foreach($category as $key => $cate){
@@ -44,35 +44,53 @@
 
     
         <div class="form-group">
-            <label for="pwd">Mô tả món ăn</label>
-            <textarea  name="desc_recipe" class="form-control" rows="3"><?php echo $rec['desc_recipe'] ?></textarea>
+            <label for="desc">Mô tả món ăn</label>
+            <textarea id="editor_desc" name="desc_recipe" class="form-control" rows="3"><?php echo $rec['desc_recipe'] ?></textarea>
         </div>
     
 
     
         <div class="form-group">
-            <label for="pwd">Nguyên liệu</label>
-            <textarea name="ingredient" class="form-control" ><?php echo $rec['ingredient'] ?></textarea>
+            <label for="ing">Nguyên liệu</label>
+            <textarea id="editor_ingredient" name="ingredient" class="form-control" ><?php echo $rec['ingredient'] ?></textarea>
         </div>
     
         <div class="form-group" id="step">
-     
-            <label for="step">Các bước thực hiện</label>
-                    <textarea name="steptodo"  class="form-control" placeholder="Các bước làm" rows="8"><?php echo $rec['steptodo'] ?></textarea> 
-         
-           <!-- <button type="submit" class="btn btn-default" id="add" >Thêm bước</button>-->
-             
+                <label for="step">Các bước thực hiện</label>
+                <textarea id="editor_step" name="steptodo"  class="form-control" placeholder="Các bước làm" rows="8"><?php echo $rec['steptodo'] ?></textarea> 
+      
+        </div> 
+
+        <div class="form-group">
+            <label for="email">Gợi Ý</label>
+            <select class="form-control" name="suggest_recipe"> 
+                <?php
+                    if($rec['suggest_recipe']==0){
+                ?>
+                <option selected value="0">Không</option>    
+                <option value="1">Có</option>
+                <?php
+                    }else{
+                ?>
+                <option value="0">Không</option>    
+                <option selected value="1">Có</option>
+                <?php
+                    }
+                    ?>
+            </select>
         </div>
 
        
         
         <button type="submit" class="btn btn-default">Cập nhật công thức</button>
-    </div> 
+     
 
     
     <?php
     }
     ?>    
     </form>
-
+    
 </div>
+
+</section>

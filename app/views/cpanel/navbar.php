@@ -30,6 +30,14 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a href="#">Banner</a>
+                    <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                    <ul class="js-sub-menu sub-menu">
+                        <li><a href="<?php echo BASE_URL ?>/product/add_banner">Thêm</a></li>
+                        <li><a href="<?php echo BASE_URL ?>/product/list_banner">Liệt kê</a></li>
+                    </ul>
+                </li>
                 
 
                 <li>
@@ -53,3 +61,5 @@
         
     </div>
   </nav>
+  <section class="main">
+    <div class="container">
