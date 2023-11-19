@@ -4,8 +4,8 @@ class DModel{
 
     public function __construct(){
        $connect = 'mysql:dbname=ct275_project; host=localhost';
-        $user = 'vien12';
-        $pass = 'vien12';
+        $user = 'root';
+        $pass = '';
         $this->db = new Database($connect,$user,$pass);
     }
 }
