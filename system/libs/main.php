@@ -45,7 +45,8 @@ class Main{
             }
         }
     }
-   
+
+       
     public function callMethod(){
         if(isset($this->url[2])){
             $this->methodName = $this->url[1];

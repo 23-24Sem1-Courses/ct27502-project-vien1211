@@ -25,7 +25,7 @@
       <tr>
         <td><?php echo $i ?></td>
         <td><img src="<?php echo BASE_URL ?>/public/uploads/banner/<?php echo $bann['img_banner'] ?>" height="300" width="350"></td>
-        <td><a href="<?php echo BASE_URL ?>/product/delete_banner/<?php echo $bann['id_img_banner'] ?>">Xóa</a> || <a href="<?php echo BASE_URL ?>/product/edit_banner/<?php echo $bann['id_img_banner'] ?>">Cập nhật</a></td>
+        <td><a href="<?php echo BASE_URL ?>/product/delete_banner/<?php echo $bann['id_img_banner'] ?>"class="btn">Xóa</a> <a href="<?php echo BASE_URL ?>/product/edit_banner/<?php echo $bann['id_img_banner'] ?>"class="btn">Cập nhật</a></td>
       </tr>
       <?php
             }
