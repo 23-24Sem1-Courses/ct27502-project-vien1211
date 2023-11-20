@@ -38,8 +38,8 @@ class product extends DController{
     }
 
     public function insert_category(){
-        $title = $_POST['title_category'];
-        $desc = $_POST['desc_category'];
+        $title = htmlspecialchars($_POST['title_category'], ENT_QUOTES, 'UTF-8');
+        $desc = htmlspecialchars($_POST['desc_category'], ENT_QUOTES, 'UTF-8');
 
         $table = "category";
         $data = array(
