@@ -4,7 +4,7 @@ class Main{
     public $url;
     public $controllerName = "index";
     public $methodName = "index";
-    public $controllerPath = "app/controllers/";
+    public $controllerPath = "../app/controllers/";
     public $controller;
     
     public function __construct(){

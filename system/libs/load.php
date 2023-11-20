@@ -11,11 +11,11 @@ class Load{
         if($data==true){
             extract($data);
         }
-         include 'app/views/'.$filename.'.php';
+         include '../app/views/'.$filename.'.php';
     }
 
     public function model($filename){
-        include 'app/models/'.$filename.'.php';
+        include '../app/models/'.$filename.'.php';
         return new $filename();
     }
 }

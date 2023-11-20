@@ -62,11 +62,15 @@ class product extends DController{
     public function insert_recipe(){
         // $title = $_POST['title_recipe'];
         $title = htmlspecialchars($_POST['title_recipe'], ENT_QUOTES, 'UTF-8');
-        $desc = $_POST['desc_recipe'];
+        $desc = htmlspecialchars($_POST['desc_recipe'], ENT_QUOTES, 'UTF-8');
+        
+        // $desc = $_POST['desc_recipe'];
         $suggest = $_POST['suggest_recipe'];
 
-        $ingredient = $_POST['ingredient'];
-        $step = $_POST['steptodo'];
+        // $ingredient = $_POST['ingredient'];
+        $ingredient = htmlspecialchars($_POST['ingredient'], ENT_QUOTES, 'UTF-8');
+        $step = htmlspecialchars($_POST['steptodo'], ENT_QUOTES, 'UTF-8');
+        // $step = $_POST['steptodo'];
        
         $img = $_FILES['img_recipe']['name'];
         $tmp_image = $_FILES['img_recipe']['tmp_name'];
